@@ -1,7 +1,7 @@
 {
 	"name": "kanryu/nta-unicode",
 	"description": "Portable library for normalizing Unicode strings sent in tax exemption digitization application to the Japan NTA",
-	"keywords": ["unicode", "string""],
+	"keywords": ["unicode", "string"],
 	"homepage": "https://github.com/kanryu/nta-unicode",
 	"license": "MIT",
 	"authors": [
