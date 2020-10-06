@@ -1,2 +1,43 @@
-# nta-unicode
-Portable library for normalizing Unicode strings sent in tax exemption digitization application to the Japan NTA
+# NtaUnicode
+
+国税庁が公開している免税電子化申請サーバーはUnicodeで規定された文字のうち、下の表の文字を除き入力が禁じられています。
+禁じられた文字を含めた免税申請を行った場合申請が失敗してしまうため、事前に文字を取り除くか代替文字に置き換える必要があります。
+
+本ライブラリはその補助をするための実装です。
+
+| 文字種 | 文字コード |
+| ------ | ------ |
+| 基本ラテン | #x0009、#x000A、#x000D、#x0020～#x007E |
+| 平仮名 | #x3040～#x309F |
+| 片仮名 | #x30A0～#x30FF |
+| CJK 統合漢字 | #x4E00～#x9FFF |
+| CJK 互換漢字 | #xF900～#xFAFF |
+| CJK 用の記号及び文音記号 | #x3000～#x303F |
+| 半角形・全角形(半角カナを除く)  | #xFF00～#xFF65、#xFFA0～#xFFEF |
+| ラテン-１補助 | #x00A0～#x00FF |
+| 矢印 | #x2190～#x21FF |
+| 一般句読点 | #x2000～#x206F |
+| 罫線素片 | #x2500～#x257F |
+| 幾何学模様 | #x25A0～#x25FF |
+| 基本ギリシャ | #x0370～#x03FF |
+| キリール | #x0400～#x04FF |
+| 数学記号 | #x2200～#x22FF |
+| 数字の形 | #x2150～#x218F |
+| 囲み英数字 | #x2460～#x24FF |
+| 囲み CJK 文字／月 | #x3200～#x32FF |
+| CJK 互換文字 | #x3300～#x33FF |
+
+
+## 参考
+
+- 免税販売管理システムの利用について(国税庁)
+  - https://www.nta.go.jp/publication/pamph/shohi/menzei/201805/format/001.htm
+
+
+## License
+
+MIT
+
+## Author
+
+Copyright 2020 KATO Kanryu(k.kanryu@gmail.com)
